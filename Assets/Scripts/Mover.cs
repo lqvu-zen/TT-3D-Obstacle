@@ -15,8 +15,14 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovePlayer();
+    }
+
+    void MovePlayer()
+    {
         float playerXValue = Input.GetAxis("Horizontal") * Time.deltaTime * m_playerMoveSpeed;
         float playerZValue = Input.GetAxis("Vertical") * Time.deltaTime * m_playerMoveSpeed;
+
         transform.Translate(playerXValue, 0f, playerZValue);
-    }
+    }    
 }
